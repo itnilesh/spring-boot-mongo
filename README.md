@@ -5,9 +5,9 @@ Install `mongo` DB on your Mac with homebrew, this is as simple as:
 
 `$ brew install mongodb`
 
-Clone project 'https://github.com/itnilesh/spring-boot-mongo.git'  in local folder.
+Clone project `https://github.com/itnilesh/spring-boot-mongo.git`  in local folder.
 
-'git clone https://github.com/itnilesh/spring-boot-mongo.git'
+`git clone https://github.com/itnilesh/spring-boot-mongo.git`
 
 Import in Eclipse as maven project.
 
