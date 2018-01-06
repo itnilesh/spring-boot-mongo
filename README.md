@@ -15,7 +15,7 @@ It connect to local mongo db without any configuration.
 
 It uses 
 
-1. Mongo Repository
-2. Mongo Template
+1. Mongo Repository (CRUD , simple queries)
+2. Mongo Template (complex queries like AND/OR etc)
 
 To execute mongo queries.
