@@ -30,20 +30,26 @@ public class MongoApplication implements CommandLineRunner {
 
 		bookRepo.deleteAll();
 
-		bookRepo.save(new Book("modelName1", "namespace1", 1));
-		bookRepo.save(new Book("modelName2", "namespace1", 2));
-		bookRepo.save(new Book("modelName2", "namespace2", 1));
-		bookRepo.save(new Book("modelName3", "namespace2", 3));
+		bookRepo.save(new Book("name	1", "group1", 1));
+		bookRepo.save(new Book("name2", "group2", 2));
+		bookRepo.save(new Book("name3", "group2", 1));
+		bookRepo.save(new Book("name3", "group3", 3));
 
+		//  Using query, find by field
 		bookRepo.findByName("modelName1").stream().forEach(e -> System.out.println(e));
+		
+		// Using query with mongo data repository 
+		System.out.println("Version of books between 3 and 4 >> " + bookRepo.findBooksByVersionBetween(2,4));
 
 		Query query = new Query();
-		query.addCriteria(Criteria.where("modelName").is("modelName2"));
-		query.addCriteria(Criteria.where("namespace").is("namespace2"));
-		query.addCriteria(Criteria.where("version").is(1));
+		
+		// projection
+		query.fields().exclude("group");
+		// AND query
+		query.addCriteria(Criteria.where("name").is("name3"));
+		query.addCriteria(Criteria.where("group").is("group3"));
+		query.addCriteria(Criteria.where("version").is(3));
 
 		System.out.println("Using mongo template => " + mongoTemplate.find(query, Book.class));
-		System.out.println("Version of books between 3 and 4" + bookRepo.findBooksByVersionBetween(2,4));
-
 	}
 }
