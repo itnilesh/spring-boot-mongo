@@ -1,7 +1,9 @@
 
-Install mongo DB on your Mac with homebrew, this is as simple as:
+#### Spring Boot + Mongo DB tutorial
 
-$ brew install mongodb
+Install `mongo` DB on your Mac with homebrew, this is as simple as:
+
+`$ brew install mongodb`
 
 Clone project in local folder.
 
@@ -11,7 +13,7 @@ It connect to local mongo db without any configuration.
 
 It uses 
 
-Mongo Repository
-Mongo Template
+1. Mongo Repository
+2. Mongo Template
 
 To execute mongo queries.
