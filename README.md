@@ -18,6 +18,6 @@ It uses
 2. Mongo Template (complex queries like AND/OR etc)
 .. to execute mongo queries.
 
-For eclipse/sts users , you can configure lombok for code manupulation using or adding lombok in your classpath
+For eclipse/sts users , you can configure lombok for code manupulation using or adding lombok jar in your classpath
 `http://www.vogella.com/tutorials/Lombok/article.html`
 
